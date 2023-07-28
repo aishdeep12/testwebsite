@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barcode Scanner</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Barcode Scanner</h1>
+  <div>
+    <label for="barcodeInput">Barcode:</label>
+    <input type="text" id="barcodeInput">
+    <button id="lookupButton">Lookup</button>
+  </div>
+  <button id="scanButton">Scan Barcode</button>
+  <div id="scanner-container"></div>
+  <p>Scanned Value: <span id="scannedValue"></span></p>
+  <p>Lookup Value: <span id="lookupValue"></span></p>
+
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>SKU</th>
+        <th>Style</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody id="dataBody"></tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://unpkg.com/quagga/dist/quagga.min.js"></script>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
