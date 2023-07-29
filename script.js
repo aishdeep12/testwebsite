@@ -6,7 +6,7 @@ $(document).ready(() => {
     // Load data from the Excel file
     function loadData() {
         console.log('Loading data...');
-        fetch('/load-data')
+        fetch('skulist.xlsx')
           .then(response => response.arrayBuffer())
           .then(arrayBuffer => {
             console.log('Data loaded successfully.');
